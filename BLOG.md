@@ -7,13 +7,14 @@ The repository we will use is the Docker Official Getting Started App, which has
 
 👉 GitHub Repo Link: https://github.com/GGWPEZGAMER/my-getting-started-app
 
+```bash
 ### Step-by-Step Process ###
 ### Step 1 --- Clone the Application
 
 git clone https://github.com/docker/getting-started-app.git
 -------------------------------------------------------------------------------------------------------------
 ### Step 2 --- Push to my own github repository ###
-```bash
+
 cd getting-started-app
 git remote remove origin
 git remote add origin https://github.com/GGWPEZGAMER/getting-started-app.git
