@@ -6,33 +6,68 @@ In today’s Task 2, we will learn how to Dockerize an application from GitHub a
 The repository we will use is the Docker Official Getting Started App, which has been uploaded to my own GitHub repository.
 
 👉 GitHub Repo Link: https://github.com/GGWPEZGAMER/my-getting-started-app
-
+---------------------------------------------------------------------------------------------------------------------------------
 ```bash
 ### Step-by-Step Process ###
-### Step 1 --- Clone the Application
 
-git clone https://github.com/docker/getting-started-app.git
--------------------------------------------------------------------------------------------------------------
-### Step 2 --- Push to my own github repository ###
+### Get Started ###
 
-cd getting-started-app
-git remote remove origin
-git remote add origin https://github.com/GGWPEZGAMER/getting-started-app.git
-git branch -M main
-git push -u origin main
-------------------------------------------------------------------------------------------------------------
-### Step 3 --- Build Docker Image ###
+- Clone a sample git repository using the below command or use your project for the demo:
 
-docker build -t getting-started-app .
--------------------------------------------------------------------------------------------------------------
-### Step 4 --- Run the Container ###
+git clone https://github.com/GGWPEZGAMER/my-getting-started-app.git
+---------------------------------------------------------------------------------------------------------------------------------
+- cd into the directory
 
-docker run -d -p 3000:3000 getting-started-app
+cd my-getting-started-app/
+---------------------------------------------------------------------------------------------------------------------------------
+- Create an empty file with the name Dockerfile
 
-(note: after running the containner , u can be access the webpage with http://localhost:3000)
---------------------------------------------------------------------------------------------------------------
-### Step 5 --- Explore docker init ###
+touch Dockerfile
+----------------------------------------------------------------------------------------------------------------------------------
+- Using the text editor of your choice, paste the below content ( Details about each of these have already shared in the video )
 
-docker init
--------------------------------------------------------------------------------------------------------------
-Reference Video-https://www.youtube.com/watch?v=nfRsPiRGx74
+FROM node:18-alpine
+RUN sed -i 's|https://dl-cdn.alpinelinux.org|https://mirrors.aliyun.com|g' /etc/apk/repositories
+RUN apk add --no-cache python3 make g++
+WORKDIR /app
+COPY . .
+RUN npm install --production
+CMD ["node", "src/index.js"]
+EXPOSE 3000
+----------------------------------------------------------------------------------------------------------------------------------
+- Build the docker image using the application code and Dockerfile
+
+docker build -t day02-todo .
+----------------------------------------------------------------------------------------------------------------------------------
+- Verify the image has been created and stored locally using the below command:
+
+docker images
+------------------------------------------------------------------------------------------------------------------------------------
+-Create a public repository on hub.docker.com and push the image to remote repo
+
+docker login
+docker tag day02-todo:latest username/new-reponame:tagname
+docker images
+docker push username/new-reponame:tagname
+-------------------------------------------------------------------------------------------------------------------------------------
+- To pull the image to another environment, you can use below command
+
+docker pull username/new-reponame:tagname
+--------------------------------------------------------------------------------------------------------------------------------------
+- To start the docker container, use below command
+
+docker run -dp 3000:3000 username/new-reponame:tagname
+---------------------------------------------------------------------------------------------------------------------------------------
+- Verify your app.If you have followed the above steps correctly, your app should be listening on localhost:3000
+- To enter(exec) into the container, use the below command
+
+docker exec -it conatinername sh
+or
+docker exec -it containerid sh
+----------------------------------------------------------------------------------------------------------------------------------------
+- To view docker logs
+
+docker logs containername
+or 
+docker logs containerid
+------------------------------------------------------------------------------------------------------------------------------------------
