@@ -1,4 +1,3 @@
-day02
 Day 2: How to Dockerize a Project  
 Hello #LinkedInCommunity and #TheCloudOpsCommunity ,  
   
