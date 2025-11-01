@@ -1,12 +1,16 @@
-Dockerizing My First App — Step-by-Step Guide
-Task 2 of #40DaysOfKubernetes Challenge
-
-In today’s Task 2, we will learn how to Dockerize an application from GitHub and run it as a container using a Dockerfile.
-
-The repository we will use is the Docker Official Getting Started App, which has been uploaded to my own GitHub repository.
-
-👉 GitHub Repo Link: https://github.com/GGWPEZGAMER/my-getting-started-app
----------------------------------------------------------------------------------------------------------------------------------
+day02
+Day 2: How to Dockerize a Project  
+Hello #LinkedInCommunity and #TheCloudOpsCommunity ,  
+  
+Today I want to share the Day 2 of #40DaysOfKubernetes journey with #Piyushsachdeva .  
+Below are the lecture of Day 2 learning.  
+---------------------------------------------------------------------------------------------------------------------------------  
+Docker and Kubernetes sandbox environment,  
+https://labs.play-with-docker.com/  
+https://labs.play-with-k8s.com/  
+---------------------------------------------------------------------------------------------------------------------------------  
+Installing Docker Desktop Client  
+https://www.docker.com/products/docker-desktop/
 ```bash
 ### Step-by-Step Process ###
 
@@ -71,6 +75,10 @@ docker logs containername
 or
 docker logs containerid
 ------------------------------------------------------------------------------------------------------------------------------------------
-#PiyushSachdeva
-#CloudOps Community
-Reference Video - https://youtu.be/nfRsPiRGx74?si=ODUMgKUEBPNIOdD8
+```
+Check out the today's lecture from Original Mentor #Piyushsachdeva
+Youtube - https://youtu.be/ul96dslvVwY?si=jK1Y5qETvNSAbhQT
+Github - https://github.com/piyushsachdeva/CKA-2024/blob/main/Resources/Day01/README.md
+
+#Kubernetes #Docker # DevOps #TechLearning #Containerization #CloudOps
+#piyushsachdeva #TheCloudOpsCommunity
