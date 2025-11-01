@@ -76,9 +76,9 @@ or
 docker logs containerid
 ------------------------------------------------------------------------------------------------------------------------------------------
 ```
-Check out the today's lecture from Original Mentor #Piyushsachdeva
-Youtube - https://youtu.be/ul96dslvVwY?si=jK1Y5qETvNSAbhQT
-Github - https://github.com/piyushsachdeva/CKA-2024/blob/main/Resources/Day01/README.md
-
-#Kubernetes #Docker # DevOps #TechLearning #Containerization #CloudOps
+Check out the today's lecture from Original Mentor #Piyushsachdeva  
+Youtube - https://youtu.be/ul96dslvVwY?si=jK1Y5qETvNSAbhQT  
+Github - https://github.com/piyushsachdeva/CKA-2024/blob/main/Resources/Day01/README.md  
+  
+#Kubernetes #Docker # DevOps #TechLearning #Containerization #CloudOps  
 #piyushsachdeva #TheCloudOpsCommunity
